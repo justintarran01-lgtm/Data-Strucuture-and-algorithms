@@ -1,0 +1,48 @@
+public class Main {
+    public static void main (String [] arg) {
+
+        // create a array
+
+        int [] number = {5, 12, 8, 20, 15};
+
+        //create variable
+
+        int target = 10;
+        boolean found = false;
+       
+
+        //loop 
+
+        for (int i = 0; i < number.length; i++) {
+
+           
+         
+
+            
+            // if statement
+
+            if (number[i] == target){
+                System.out.println("target found: " + i);
+                
+                found = true;
+            } 
+            
+           
+        
+        }
+    
+         
+             //make boolean if
+
+            if (found){ 
+                System.out.println("target found");
+            } else {
+                System.out.println("targe is not found");
+            }
+                
+            
+        
+          
+           
+    }
+} 

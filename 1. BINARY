@@ -1,0 +1,46 @@
+1. BINARY 
+
+public class Main {
+
+    public static void main (String [] arg) {
+
+        int [] number = {4, 8, 12, 16, 20, 24, 28, 32, 36, 42, 48, 52, 56};
+
+        int target = 50;
+
+        int first = 0;
+        int last = number.length - 1;
+
+        boolean found = false;
+
+       
+
+        while ( first <= last) {
+
+             int middle = (first + last) / 2;
+
+            if (number[middle] == target) {
+            System.out.println("index found: " + middle);
+
+                found = true;
+                 break;
+            } else if (number[middle] < target) {
+
+                
+                 first = middle + 1;
+            }else {
+                 last = middle - 1;
+                
+            }
+
+
+
+        }
+        
+            if (!found) {
+                System.out.println("no target found");
+             }
+
+
+    }
+}

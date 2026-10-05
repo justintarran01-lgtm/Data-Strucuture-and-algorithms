@@ -1,0 +1,92 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+
+public class Main {
+
+    public static void main (String [] arg) {
+
+
+        System.out.println("=========================");
+        System.out.println("NUMBER ANALYZE");
+        System.out.println("==========================");
+
+        ArrayList <Integer> number = new ArrayList <> ();
+        Scanner select = new Scanner (System.in);
+
+        
+
+        int total = 0;
+        
+      
+        
+
+        System.out.print("How many numbers");
+        int enter = select.nextInt();
+        
+
+
+        for (int i = 0; i < enter; i++ ){
+
+            System.out.print("Enter the number");
+            int choose = select.nextInt();
+
+            number.add(choose);
+
+             total += choose;
+
+           
+               
+           
+        }   
+
+          double average = total / enter;
+      
+
+        System.out.println("original number" + number);
+
+        number.sort(null);
+        System.out.println("lowest to highest" + number);
+
+        System.out.println("high " + number.get(number.size() - 1));
+        System.out.println("lowest " + number.get(0));
+
+        System.out.println("total " + total);
+
+        System.out.println("Average " + average );
+
+        int even = 0;
+        int odd = 0;
+
+
+        for (int i = 0; i < enter; i++){
+
+        
+
+        if (number.get(i) % 2 == 0){
+
+            even += 1;
+         
+                
+
+        } else {
+            odd += 1;
+            
+        }
+    
+       
+         
+    }
+       
+
+     System.out.println("even " + even ); 
+          System.out.println("odd " + odd);
+
+
+
+
+
+
+
+    }
+}

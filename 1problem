@@ -1,0 +1,111 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
+
+public class Main {
+
+    public static void main (String [] arg){
+
+    System.out.println("==============================");
+    System.out.println("wellcome to student details");
+    System.out.println("==============================");
+
+
+    ArrayList <Integer> score =  new ArrayList <> ();
+    Collections.reverseOrder();
+    double total = 0;
+
+    
+     int pass = 0;
+     int failed = 0;
+     
+    
+
+    Scanner choose = new Scanner (System.in);
+
+
+    System.out.print("how many student? ");
+    int option = choose.nextInt();
+     
+
+ 
+   
+
+    for (int i = 0; i < option; i++ ){
+
+        System.out.println("Enter score for student: ");
+           int option1 = choose.nextInt();
+
+
+          
+           score.add(option1);
+           
+
+           System.out.println(score);
+           total += option1;
+
+           
+     if (option1 >= 75  ){
+         pass += 1;
+         System.out.println("pass " + pass);           
+     } else {
+        failed += 1;
+        System.out.println("failed " + failed);
+
+
+        
+       
+
+
+     }
+
+    }
+
+     System.out.println("original score " + score);
+
+     score.sort(null);
+
+     System.out.println("lowest to highest " + score);
+
+       score.sort(Collections.reverseOrder());
+     System.out.println("highest to lowest" + score);
+
+     System.out.println("Highest " + score.get(0));
+     System.out.println("lowest " + score.get(score.size() - 1 ));
+
+     
+
+     System.out.println("average score " + total / option );
+     System.out.println("pass " + pass);
+     System.out.println("failed " + failed);
+
+
+     
+    
+        
+    
+
+      for (int i = 0; i < option; i++ ){
+
+        if (score.get(i) >= 90){
+            System.out.println("excellent");
+
+        } else if (score.get(i) >= 80) {
+            System.out.println("very good");
+        } else if (score.get(i) >= 75){
+            System.out.println("good" );
+        } else {
+            System.out.println("need improvement");
+        }
+      }
+
+        
+     
+
+    
+
+
+    
+    }
+}
